@@ -23,7 +23,7 @@ pipeline {
         stage ("docker push") {
          steps {
              script {
-                sh "aws ecr get-login-password --region us-east-2 | docker login --username AWS --password-stdin 021921558864.dkr.ecr.us-east-1.amazonaws.com/mavensample"
+                sh "aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 021921558864.dkr.ecr.us-east-1.amazonaws.com/mavensample"
                 sh "docker push 021921558864.dkr.ecr.us-east-1.amazonaws.com/mavensample"
                  
              }
